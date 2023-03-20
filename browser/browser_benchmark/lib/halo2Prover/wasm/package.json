@@ -1,12 +1,18 @@
 {
-  "name": "halo2_efficient_ecdsa",
-  "version": "0.1.0",
-  "files": [
-    "halo2_efficient_ecdsa_bg.wasm",
-    "halo2_efficient_ecdsa.js",
-    "halo2_efficient_ecdsa.d.ts"
+  "name": "halo2-rsa",
+  "collaborators": [
+    "Sora Suegami"
   ],
-  "module": "halo2_efficient_ecdsa.js",
-  "types": "halo2_efficient_ecdsa.d.ts",
+  "description": "RSA verification circuit in halo2.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "files": [
+    "halo2_rsa_bg.wasm",
+    "halo2_rsa.js",
+    "halo2_rsa.d.ts",
+    "LICENSE.md"
+  ],
+  "module": "halo2_rsa.js",
+  "types": "halo2_rsa.d.ts",
   "sideEffects": false
 }

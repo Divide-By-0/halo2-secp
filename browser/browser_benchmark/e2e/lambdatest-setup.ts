@@ -27,7 +27,7 @@ const capabilities = {
 };
 
 // Patching the capabilities dynamically according to the project name.
-const modifyCapabilities = (configName, testName) => {
+const modifyCapabilities = (configName: string, testName: string) => {
   let config = configName.split("@lambdatest")[0];
   let [browserName, browserVersion, platform] = config.split(":");
   capabilities.browserName = browserName
@@ -68,8 +68,8 @@ const test = base.test.extend({
           remark: testInfo.error?.stack || testInfo.error?.message,
         },
       };
-      await ltPage.evaluate(() => {},
-      `lambdatest_action: ${JSON.stringify(testStatus)}`);
+      await ltPage.evaluate(() => { },
+        `lambdatest_action: ${JSON.stringify(testStatus)}`);
       await ltPage.close();
       await browser.close();
     } else {

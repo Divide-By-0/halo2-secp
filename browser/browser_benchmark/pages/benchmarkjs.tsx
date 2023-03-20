@@ -14,7 +14,7 @@ declare global {
 
 const formatStats = (stats: any) => {
   let statsString = "";
-  for(let k of ["mean", "deviation", "variance", "moe", "rme", "sem"]) {
+  for (let k of ["mean", "deviation", "variance", "moe", "rme", "sem"]) {
     statsString += "  " + k + ": " + stats[k] + "\n";
   }
   statsString += "  Sample Size: " + stats.sample.length + "\n";
@@ -68,13 +68,14 @@ export default function Home() {
             // Benchmark.js Suite
             const suite = new window.Benchmark.Suite();
             suite
-              .add("scalar mult full", {
+              .add("2048 bit public key, 1024 byte message", {
                 defer: true,
                 minSamples: minSamples, // set in the UI
-                fn: async (deferred:any) => {
-                  await withProverApi(worker).generateProofScalarMultFull();
+                fn: async (deferred: any) => {
+                  await withProverApi(worker).generateProof2048_1024();
                   deferred.resolve();
-              }})
+                }
+              })
               .on("cycle", function (event: Event) {
                 console.log(String(event.target));
               })

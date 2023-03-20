@@ -1,0 +1,12 @@
+{
+  "name": "halo2_efficient_ecdsa",
+  "version": "0.1.0",
+  "files": [
+    "halo2_efficient_ecdsa_bg.wasm",
+    "halo2_efficient_ecdsa.js",
+    "halo2_efficient_ecdsa.d.ts"
+  ],
+  "module": "halo2_efficient_ecdsa.js",
+  "types": "halo2_efficient_ecdsa.d.ts",
+  "sideEffects": false
+}

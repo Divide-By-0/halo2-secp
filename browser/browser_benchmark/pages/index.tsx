@@ -25,29 +25,11 @@ export default function Home() {
       <button
         onClick={async () => {
           if (worker) {
-            await withProverApi(worker).generateProofScalarMult();
+            await withProverApi(worker).generateProof2048_1024();
           }
         }}
       >
-        prove (scalar mult)
-      </button>
-      <button
-        onClick={async () => {
-          if (worker) {
-            await withProverApi(worker).generateProofScalarMultFull();
-          }
-        }}
-      >
-        prove (scalar mult full)
-      </button>
-      <button
-        onClick={async () => {
-          if (worker) {
-            await withProverApi(worker).generateProofSimpleCircuit();
-          }
-        }}
-      >
-        prove (simple circuit)
+        prove (2048 bit public key, 1024 byte message)
       </button>
     </div>
   );
